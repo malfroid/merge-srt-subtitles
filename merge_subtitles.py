@@ -43,7 +43,7 @@ def main(argv):
 
     # Make primary yellow
     for s in subtitles_primary:
-        s.content = '<font color="#ffff54"><i>' + s.content + '</i></font>'
+        s.content = '<font color="#ffff54">' + s.content + '</font>'
 
     # Place secondary on top
     for s in subtitles_secondary:
