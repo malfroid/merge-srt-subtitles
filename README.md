@@ -1,7 +1,9 @@
 merge-srt-subtitles
 ============
 
-This is a python3 script powered by srt that allows a user to merge two `.srt` subtitles with different languages, and create one dual-language subtitle.
+This is a python3 script that allows a user to merge two `.srt` subtitles with different languages, and create one dual-language subtitle.
+
+The idea of using merged subtitles (let's call them dual subtitles or bilingual subtitles) is to watch movies/series in original version with two sets of subtitles. This can be used to learn a second language while watching movies/series. 
 
 The primary subtitle will be shown at the bottom of the screen in yellow. The secondary subtitle will be shown at the top of the screen in white.
 
