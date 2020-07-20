@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import srt  # for srt format loading and writing
+import srt  # for srt format handling
 import glob  # for unix style filename matching
 import sys  # input arguments
 import getopt  # to raise error in case of incorrect arguments
@@ -29,7 +29,6 @@ def main(argv):
 
     # Read files and convert to list
     primary_path = glob.glob('./*.' + primary_language + '.srt')[0]
-    merged_path = primary_path.replace(primary_language, 'merged')
     secondary_path = glob.glob('./*.' + secondary_language + '.srt')[0]
     primary_file = open(primary_path, 'r')
     primary_text = primary_file.read()
@@ -55,6 +54,7 @@ def main(argv):
     subtitles_merged = list(srt.sort_and_reindex(subtitles_merged))
 
     # Write merged to file
+    merged_path = primary_path.replace(primary_language, 'merged')
     merged_text = srt.compose(subtitles_merged)
     merged_file = open(merged_path, 'w')
     merged_file.write(merged_text)
