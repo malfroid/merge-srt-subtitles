@@ -30,10 +30,10 @@ def main(argv):
     # Read files and convert to list
     primary_path = glob.glob('./*.' + primary_language + '.srt')[0]
     secondary_path = glob.glob('./*.' + secondary_language + '.srt')[0]
-    primary_file = open(primary_path, 'r')
+    primary_file = open(primary_path, 'r', errors='ignore')
     primary_text = primary_file.read()
     primary_file.close()
-    secondary_file = open(secondary_path, 'r')
+    secondary_file = open(secondary_path, 'r', errors='ignore')
     secondary_text = secondary_file.read()
     secondary_file.close()
     subtitle_generator_primary = srt.parse(primary_text)
